@@ -56,6 +56,7 @@ public class PhoneCode {
         String vcode = getCode();
       jedis.setex(codeKey,120,vcode);
       jedis.close();
+      return;
     }
     //3验证码的校验
     public static void getRedisCode(String phone,String code){
